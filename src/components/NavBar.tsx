@@ -2,9 +2,11 @@ import { auth, signIn } from "@/auth";
 import Link from "next/link";
 import UserButton from "./UserButton";
 import { Button } from "./ui/button";
+import getSession from "@/lib/getSession";
+
 
 export default async function NavBar() {
-  const session = await auth();
+  const session = await getSession();
   const user = session?.user;
 
   return (
