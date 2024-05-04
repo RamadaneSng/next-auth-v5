@@ -26,5 +26,5 @@ export async function updateProfile(values: UpdateProfileValues) {
     },
   });
 
-  revalidatePath('/')
+  revalidatePath("/");
 }
